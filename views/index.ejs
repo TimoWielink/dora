@@ -3,7 +3,7 @@
 <% include partials/head.ejs %>
 
   <head>
-    <title>Junction 2023</title>
+    <title>Dora</title>
 
   </head>
 
@@ -11,46 +11,53 @@
   <body>
     <div class="hero-page">
       <div class="container  hero-mt">
-        <div class="text-center hero">
-          <img src="/images/logo.png" alt="Your Image" class="img-fluid hero-image">
-          <p>Junction 2023 Boiler Plate</p>
-
-          <div class="button-container">
-            <a href="/team" class="custom-btn-link">
-              <button class="custom-btn btn-primary" id="btn-primary-fill">
-                <img src="images/star.svg" alt="Icon" id="iconInsideBtn" />
-                Go To The App
-              </button>
-            </a>
-            <a href="/team" class="custom-btn-link">
-              <button class="custom-btn-2 btn-primary" >
-                <img src="images/video.svg" alt="Icon" id="iconInsideBtn-2" />
-                Watch The Video
-              </button>
-            </a>
-            <a href="/team" class="custom-btn-link">
-              <button class="custom-btn-2 btn-primary" >
-                <img src="images/users.svg" alt="Icon" id="iconInsideBtn-2" />
-                Meet Our Team
-              </button>
-            </a>
-          
-
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="/images/logo.png" alt="Your Image" class="img-fluid hero-image">
+            <p id="hero-p">Embark on Adventures, Earn Rewards!</p>
+            <p id="hero-p-text">Unleash the power of play and imagination with Dora, an app designed to inspire kids to embrace an active, healthy lifestyle. Say goodbye to sedentary screen time; say hello to exciting adventures and physical fun!</p>
+  
+        
+              <a href="/team" class="custom-btn-link">
+                <button class="custom-btn btn-primary" id="btn-primary-fill">
+                  <img src="images/star.svg" alt="Icon" id="iconInsideBtn" />
+                  Go To The App
+                </button>
+              </a>
+              <a href="/team" class="custom-btn-link">
+                <button class="custom-btn-2 btn-primary" >
+                  <img src="images/video.svg" alt="Icon" id="iconInsideBtn-2" />
+                  Watch The Video
+                </button>
+              </a>
+              <a href="/team" class="custom-btn-link">
+                <button class="custom-btn-2 btn-primary" >
+                  <img src="images/users.svg" alt="Icon" id="iconInsideBtn-2" />
+                  Meet Our Team
+                </button>
+              </a>
+            
+  
+    
           </div>
+
+        </div>
+    
+      
 
           <% include partials/bottom.ejs %>
 
-        </div>
+    
       </div>
     </div>
     <div id="hero-page"></div>
     </div>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        particlesJS.load('hero-page', '/particlesjs-config.json', function () {
-          console.log('particles.js loaded - callback');
-        });
-      });
+      // document.addEventListener('DOMContentLoaded', function () {
+      //   particlesJS.load('hero-page', '/particlesjs-config.json', function () {
+      //     console.log('particles.js loaded - callback');
+      //   });
+      // });
 
     </script>
   </body>
