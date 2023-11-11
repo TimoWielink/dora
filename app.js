@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var mapRoutes = require('./routes/map');
 var loginRoutes = require('./routes/login');
 var teamRoutes = require('./routes/team');
+var splashRoutes = require('./routes/splash');
 
 
 
@@ -30,6 +31,7 @@ app.use('/users', usersRouter);
 app.use('/map', mapRoutes);
 app.use('/login', loginRoutes);
 app.use('/team', teamRoutes);
+app.use('/splash', splashRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
