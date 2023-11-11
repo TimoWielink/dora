@@ -1,0 +1,538 @@
+body {
+
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  max-height: 100vh;
+
+
+}
+
+a {
+  color: #3370F6;
+}
+
+
+.btn-primary {
+
+  border-color: #3370F6;
+  background: none;
+  color: #3370F6;
+  border-radius: 99px;
+  padding: 0.75em;
+  display: flex;
+  align-items: center;
+  box-shadow: none !important;
+  border: 2px solid;
+  justify-content: center;
+}
+
+.btn-primary a {
+  text-decoration: none;
+}
+
+.btn-primary:hover a {
+  text-decoration: none;
+}
+
+#btn-primary-fill:hover {
+  text-decoration: none;
+}
+
+button:hover a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#btn-primary-fill {
+  background: #3370F6;
+  color: white;
+}
+
+#btn-primary-fill:hover {
+  background: #00B7FF;
+  border-color: #00B7FF;
+}
+
+#iconInsideBtn {
+  margin-right: 0px;
+  width: 18px;
+  height: 18px;
+
+}
+
+#iconInsideBtn-2 {
+  margin-right: 6px;
+  width: 18px;
+  height: 18px;
+
+}
+
+.btn:hover #iconInsideBtn {
+  fill: red;
+
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+.custom-btn:hover {
+  background: #3370F6;
+  color: white;
+  border-color: #3370F6;
+
+}
+
+.custom-btn-2:hover{
+background-color: #ffffff04!important;
+color: #007bff!important;
+}
+
+.custom-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-color: #3370F6;
+  background: none;
+  color: #3370F6;
+  border-radius: 99px;
+  padding: 0.75em;
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+  justify-content: center;
+}
+
+.custom-btn-link {
+  display: flex;
+}
+
+
+/* HERO PAGE */
+
+
+#hero-page {
+  position: absolute;
+  /* Added this to make z-index work */
+  top: 0;
+  /* Makes sure it covers the whole body from top */
+  left: 0;
+  /* Makes sure it covers the whole body from left */
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  background-image: url("/images/bg.png");
+  background-size: cover;
+}
+
+.hero p {
+  margin-bottom: 2em;
+}
+
+.hero-image {
+  width: 50%;
+}
+
+.hero-mt {
+  margin-top: 35vh;
+}
+
+.hero-flex {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: left;
+  padding: 2em;
+}
+
+.hero-flex span {
+  color: #656565;
+  font-family: Inter;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.02913rem;
+}
+
+.hero-flex p {
+  color: #3370F6;
+  font-family: Inter;
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.02188rem;
+}
+
+.hero-flex-right {
+  position: absolute;
+  right: -120px;
+  bottom: 0;
+  padding: 1em;
+
+}
+
+.hero-flex-right img {
+  width: 30%;
+  display: block;
+}
+
+.hero-flex-right img:hover {
+  opacity: 0.5;
+}
+
+/* Login Page */
+.login-box {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.402);
+  box-shadow: 2px 1px 24px 1px rgba(181, 181, 181, 0.20);
+  -webkit-box-shadow: 2px 1px 24px 1px rgba(181, 181, 181, 0.20);
+  -moz-box-shadow: 2px 1px 24px 1px rgba(181, 181, 181, 0.20);
+  border-radius: 22px;
+  padding: 2em;
+
+}
+
+.login-box p {
+  color: #9a9a9a;
+  font-weight: 200;
+}
+
+.btn-icon {
+  margin: 0 6px;
+}
+
+.btn-icon img {
+  width: 50%;
+}
+
+.logo-img {
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.btn-outline-dark {
+  border-color: #d2d2d2;
+}
+
+.divider {
+  border-top: 1px solid #e1e1e1;
+  margin-bottom: 1em;
+}
+
+.btn-primary-login {
+
+  background: #4f4f4f;
+  color: #ffffff;
+  border-radius: 99px;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  box-shadow: none !important;
+
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .login-box {
+    box-shadow: none;
+    background: none;
+
+  }
+
+  .btn-icon {
+    padding: 2px;
+  }
+
+}
+
+/* MAP Page */
+
+.map-page h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.button-box-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(120, 120, 120, 0.1);
+}
+
+#userInput {
+  width: 80%;
+  /* Adjust this based on the button widths */
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+
+}
+
+#sendData {
+  width: 20%;
+  /* Divided the remaining width between the two buttons */
+  height: 45px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #3370F6;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+#startButton {
+  width: 12%;
+  /* Divided the remaining width between the two buttons */
+  height: 45px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  background-color: #e5e5e5;
+  color: #3370F6;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+}
+
+
+#startButton:hover,
+#sendData:hover {
+  background-color: #6e6e6e;
+  /* Darker blue on hover */
+  color: white;
+  transition: ease-in-out 1s;
+}
+
+#responseDisplay {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 0 20px;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.container-where-input-and-button-are {
+  overflow: auto;
+}
+
+.map-page p {
+  margin-bottom: 2em;
+}
+
+.button-box-input {
+  margin-bottom: 2em;
+}
+
+/* TEAM PAGE */
+
+.team-mt{
+  margin-top: 20vh;
+  display: flex!important;
+  flex-wrap: wrap;
+  align-items: stretch; 
+  
+}
+
+
+
+.team-card {
+  border-radius: 15px;
+  border: 1.5px solid #eaeaea;
+  background: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  padding: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex: 1 0 auto; /* Take up equal space */
+  flex-direction: column;
+  margin-bottom: 2em;
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
+}
+.team-card:hover {
+  border-color: #3370F6;
+  transition: border-color 0.6s ease-in-out; /* Smooth transition for border color */
+}
+
+
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(circle at 50%, rgba(21, 43, 247, 0.1), transparent 70%);
+  background-repeat: no-repeat;
+  transform: rotate(0deg) translate(0, 0);
+  transition: transform 1.7s, opacity 0.6s;
+  pointer-events: none; /* Ignore mouse events */
+  opacity: 0; /* Start fully transparent */
+}
+
+.team-card:hover::before {
+  opacity: 1; /* Fully visible on hover */
+  animation: light-trail 2s infinite linear;
+}
+
+@keyframes light-trail {
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+    opacity: 1; /* Fully visible at the start */
+  }
+  100% {
+    transform: rotate(45deg) translate(-100%, -100%);
+    opacity: 0; /* Fade out at the end */
+  }
+}
+
+
+.team-member img {
+  width: 100%;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+
+.card-icon {
+  margin-left: 0.3em;
+}
+
+
+.social-icons img {
+  width: 12%;
+}
+
+.stats{
+  margin-top: 1.3em;
+  text-align: center;
+  color: #007bff;
+}
+
+.stat-text{
+  font-size: 1.4131rem!important;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+}
+
+.stats-p {
+  font-size: 0.42331rem;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  color: #007bff;
+}
+
+.stats-card {
+  border: 1.5px solid #eaeaea;
+  padding:12px 12px;
+  border-radius: 10px;
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 6px;
+  background-color: #ffffff;
+}
+
+.number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.descriptor {
+  font-size: 0.875rem;
+  color: #777;
+}
+
+.team-text{
+  padding-left: 0!important;
+}
+
+.team-text h3 {
+  margin: 0;
+  margin-top: 1.3em;
+  padding: 0;
+  font-family: Inter;
+  font-size: 1.1375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.team-text p {
+  color: #9C9C9C;
+  font-family: Inter;
+  font-size: 0.9695rem;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.blog-card{
+  background-image: url("/images/blog-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 17.5vh;
+
+}
+
+.blog-card h4{
+  color: white;
+  font-weight: 600;
+  font-size: 1.3em;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 0.5em;
+  flex-grow: 1;
+
+}
+
+/* Spinner */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3370F6;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

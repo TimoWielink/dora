@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/head.ejs %>
+
+  <head>
+    <title>Login</title>
+   
+  </head>
+
+
+<body >
+<div class="hero-page" >
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="login-box ">
+            <div class="text-center mb-4">
+                <img src="/images/loginlogo.png" alt="Logo" class="logo-img">
+                <h4>Welcome back</h4>
+                <p>Please enter your details to sign in.</p>
+            </div>
+            <div class="text-center mb-3">
+                <button class="btn btn-outline-dark btn-icon">
+                    <img src="/images/apple.png" alt="Apple" class="icon">
+                </button>
+                <button class="btn btn-outline-dark btn-icon">
+                    <img src="/images/google.png" alt="Apple" class="icon">
+                </button>
+                <button class="btn btn-outline-dark btn-icon">
+                    <img src="/images/microsoft.png" alt="Apple" class="icon">
+                </button>
+            </div>
+            <div class="divider"></div>
+            <!-- TODO: Hook up API -->
+            <div class="form-group">
+                <!-- <label for="email">E-Mail Address</label> -->
+                <input type="email" class="form-control" id="email" placeholder="Enter your email...">
+            </div>
+            <div class="form-group">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" class="form-control" id="password" placeholder="••••••••">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="remember">
+                <label class="form-check-label" for="remember">Remember me</label>
+                <a href="#" class="float-right">Forgot password?</a>
+            </div>
+            <a href="/">
+            <button type="submit" class="btn btn-primary-login btn-block">Sign in</button>
+            </a>
+            <div class="text-center mt-3">
+                <p>Don't have an account yet? <a href="#">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- <% include partials/bottom.ejs %> -->
+      
+    </div>
+  </div>
+</div>
+<div id="hero-page"></div>
+</div>
+<script>
+    
+  document.addEventListener('DOMContentLoaded', function() {
+      particlesJS.load('hero-page', '/particlesjs-config.json', function() {
+          console.log('particles.js loaded - callback');
+      });
+  });
+  
+  </script>
+  
+</body>
+</html>
+

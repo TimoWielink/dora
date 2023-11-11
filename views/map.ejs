@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<% include partials/head.ejs %>
+
+    <head>
+        <title>Hackathon Boilerplate</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+
+    <body>
+        <div class="hero-page map-page">
+
+            <div class="container hero-mt text-center">
+                <h1>Whats your name?</h1>
+                <p>And see the magic happen..</p>
+                <!-- Input Field -->
+                <div class="row">
+                    <div class="col-sm-8 offset-2 button-box-input">
+                        <!-- <button id="startButton">🎙️</button> -->
+                        <!-- <button onclick="startTranscription()" id="startButton">🎙️</button>
+                        <div id="transcriptionOutput"></div> -->
+
+
+                        <input type="text" id="userInput" placeholder="Enter your name here...">
+
+                        <!-- Trigger Button -->
+                        <button id="sendData">Send Data</button>
+                    </div>
+
+                </div>
+
+
+                <!-- Response Display Area -->
+                <div id="responseDisplay"></div>
+            </div>
+        </div>
+
+        <div id="spinner" style="display: none;">
+            <div class="loader"></div>
+        </div>
+        <% include partials/bottom.ejs %>
+            <div id="hero-page"></div>
+
+            <script>
+                function delay(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
+
+                
+
+
+
+                async function pollForZapierData() {
+                    try {
+                        const response = await fetch('/map/getZapierData');
+                        const data = await response.json();
+
+                        if (data && data.content) {
+                            document.getElementById('responseDisplay').innerText = data.content;
+                            return true;
+                        }
+                    } catch (error) {
+                        console.error('Error while polling:', error.message);
+                    }
+                    return false;
+                }
+
+                document.getElementById('sendData').addEventListener('click', async function () {
+                    let spinner = document.getElementById('spinner');
+                    let userInput = document.getElementById('userInput').value;
+
+                    // Show the spinner
+                    spinner.style.display = "block";
+
+                    try {
+                        await fetch('/map/sendToZapier', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ text: userInput })
+                        });
+
+                        // Polling mechanism to keep checking for Zapier's response every 2 seconds
+                        let attempts = 0;
+                        const maxAttempts = 10;
+                        while (attempts < maxAttempts) {
+                            const success = await pollForZapierData();
+                            if (success) break;
+
+                            await delay(2000);
+                            attempts++;
+                        }
+
+                        if (attempts === maxAttempts) {
+                            document.getElementById('responseDisplay').innerText = 'Response timeout. Please try again.';
+                        }
+
+                    } catch (error) {
+                        console.error('Error:', error.message);
+                        document.getElementById('responseDisplay').innerText = 'An error occurred. Please try again.';
+                    } finally {
+                        // Hide the spinner
+                        spinner.style.display = "none";
+                    }
+                });
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    particlesJS.load('hero-page', '/particlesjs-config.json', function () {
+                        console.log('particles.js loaded - callback');
+                    });
+                });
+
+            </script>
+    </body>
+
+</html>
