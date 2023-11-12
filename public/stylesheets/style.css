@@ -149,6 +149,29 @@ a:hover {
   background-size: cover;
 }
 
+@media only screen and (max-width: 600px) {
+  #hero-page {
+    position: absolute;
+    /* Added this to make z-index work */
+    top: 0;
+    /* Makes sure it covers the whole body from top */
+    left: 0;
+    /* Makes sure it covers the whole body from left */
+    width: 150%;
+    height: 150%;
+    z-index: -100;
+    background-image: url("/images/bg.png");
+    background-size: cover;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+  
+
+
+}
+
 .hero p {
   margin-bottom: 2em;
 }
