@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #3370F6;
+  color: #E8FB67;
 }
 
 
@@ -88,13 +88,14 @@ a:hover {
 .custom-btn:hover {
   background: #E8FB67;
   color: white;
-  border-color: #E8FB67;
+  border-color: #E8FB67!important;
 
 }
 
 .custom-btn-2:hover {
   background-color: #ffffff04 !important;
   color: #E8FB67 !important;
+  border-color: #E8FB67;
 }
 
 .custom-btn {
@@ -565,7 +566,7 @@ a:hover {
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #3370F6;
+  border-top: 16px solid #E8FB67;
   width: 50px;
   height: 50px;
   animation: spin 2s linear infinite;
